@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const bcrypt = require("bcryptjs");
+const bcrypt = require("bcrypt");
 
 const resetTokenSchema = new mongoose.Schema({
    user:{
@@ -17,9 +17,9 @@ const resetTokenSchema = new mongoose.Schema({
    },
 });
 
-ResetTokenSchema.pre("save", async function(next){
+resetTokenSchema.pre("save", async function(next){
     if(this.isModified("token")){
-        this.token = await bcrypt.hash(this.token, 10)
+        this.token = bcrypt.hash(this.token, 10)
     }
     next();
 })

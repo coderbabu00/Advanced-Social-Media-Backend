@@ -30,7 +30,7 @@ phonenumber:{
 profile:{
         type:String,
 },
-verifed:{
+verified:{
         type:Boolean,
         required:true,
         default:false

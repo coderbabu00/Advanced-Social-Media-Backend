@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-const bcrypt = require("bcryptjs");
-
+const bcrypt = require("bcrypt");
+  
 const verificationTokenSchema = new mongoose.Schema({
    user:{
    type:mongoose.Schema.Types.ObjectId,

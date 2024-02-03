@@ -10,8 +10,9 @@ mongoose.connect(process.env.MONGO_DB).then(()=>{
 })
 app.use(express.json());
 
+app.use("/api/user",require("./routes/user"))
+app.use("/api/post",require("./routes/post"))
 
-
-app.listen(5000,()=>{
-    console.log("Server running on port 5000");
+app.listen(5001,()=>{
+    console.log("Server running on port 5001");
 })
